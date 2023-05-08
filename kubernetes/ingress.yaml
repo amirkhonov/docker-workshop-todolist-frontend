@@ -1,0 +1,32 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: todolist-frontend-ingress
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  # Retrieve the DNS zone name using the az aks show command.
+  # You need the DNS zone name to deploy applications to the cluster.
+  #
+  # az aks show --resource-group myResourceGroup --name myAKSCluster \
+  #    --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName \
+  #    -o table
+  - host: todoapp.70b0ed213e7f42a78d0e.eastus.aksapp.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: todolist-frontend-service
+            port:
+              number: 3000
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: todolist-backend-service
+            port:
+              number: 3001
