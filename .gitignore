@@ -1,0 +1,15 @@
+\.DS_Store
+
+build
+node_modules
+config/development.json
+metrics.log
+logs
+test-output
+
+\.idea/
+/.vscode/
+build_version\.json
+npm-debug\.log\.*
+
+coverage

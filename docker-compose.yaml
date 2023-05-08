@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  todo-frontend:
+    container_name: compose-todo-frontend
+    image: simpletodoapp.azurecr.io/simpletodoapp-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      API_URL: http://localhost:3001
+
+    ports:
+      - "3000:3000"
+
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
