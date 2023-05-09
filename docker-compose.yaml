@@ -3,7 +3,7 @@ version: '3.8'
 services:
   todo-frontend:
     container_name: compose-todo-frontend
-    image: simpletodoapp.azurecr.io/todo-list-frontend:latest
+    image: simpletodoapp.azurecr.io/simpletodoapp-frontend:latest
     build:
       context: .
       dockerfile: Dockerfile
