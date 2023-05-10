@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todolist-frontend
+spec:
+  selector:
+    matchLabels:
+      app: todolist-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: todolist-frontend
+    spec:
+      containers:
+      - name: todolist-frontend
+        image: simpletodoapp.azurecr.io/simpletodoapp-frontend:latest
+        ports:
+          - containerPort: 3000
