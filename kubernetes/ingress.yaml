@@ -13,7 +13,7 @@ spec:
   # az aks show --resource-group myResourceGroup --name myAKSCluster \
   #    --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName \
   #    -o table
-  - host: todolistapp.<CLUSTER_SPECIFIC_DNS_ZONE>
+  - host: todolistapp.129f841c5c9248c497ec.eastus2.aksapp.io
     http:
       paths:
       - path: /
