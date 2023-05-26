@@ -7,7 +7,7 @@ name: deploy-frontend
 env:
     ACR_RESOURCE_GROUP: javauz-docker-event
     AZURE_CONTAINER_REGISTRY: simpletodoapp
-    CLUSTER_NAME: simpletodoapp
+    CLUSTER_NAME: todoapp-k8s
     CLUSTER_RESOURCE_GROUP: javauz-docker-event
     CONTAINER_NAME: simpletodoapp-frontend
     DEPLOYMENT_MANIFEST_PATH: |

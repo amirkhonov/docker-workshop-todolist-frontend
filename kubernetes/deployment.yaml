@@ -20,4 +20,4 @@ spec:
           - containerPort: 3000
         env:
           - name: API_URL
-            value: "https://todoapp.a7808b7d438847cebf8a.eastus2.aksapp.io:3001"
+            value: "https://todoapp.70b0ed213e7f42a78d0e.eastus.aksapp.io:3001"
