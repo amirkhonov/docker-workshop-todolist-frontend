@@ -20,4 +20,5 @@ spec:
           - containerPort: 3000
         env:
           - name: API_URL
+            # Must be same with the host key value in the ingress.yaml
             value: "http://todoapp.70b0ed213e7f42a78d0e.eastus.aksapp.io"
