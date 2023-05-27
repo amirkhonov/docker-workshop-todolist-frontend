@@ -13,7 +13,7 @@ spec:
   # az aks show --resource-group myResourceGroup --name myAKSCluster \
   #    --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName \
   #    -o table
-  - host: todoapp.70b0ed213e7f42a78d0e.eastus.aksapp.io
+  - host: todoapp.bbf7136998fc4ad9a634.eastus.aksapp.io
     http:
       paths:
       - path: /
